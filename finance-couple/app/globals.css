@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sisanya styling tambahan kalau ada, atau kosongin aja dulu biar bersih */
+body {
+  background-color: #ffffff;
+}
