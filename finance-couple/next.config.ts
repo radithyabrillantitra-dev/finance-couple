@@ -1,15 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 1. Ini kuncinya: Export jadi HTML statis
+  // 1. Wajib buat Netlify (Static Mode)
   output: "export",
   
-  // 2. Biar gambar gak error pas export
+  // 2. KUNCI PERBAIKAN 404 (Biar halaman depan terdeteksi)
+  trailingSlash: true,
+
+  // 3. Biar gambar tidak error
   images: {
     unoptimized: true,
   },
 
-  // (Settingan lama kamu)
+  // 4. Abaikan error build (biar lolos deploy)
   typescript: {
     ignoreBuildErrors: true,
   },
