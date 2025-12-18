@@ -1,14 +1,19 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // 1. Ini kuncinya: Export jadi HTML statis
+  output: "export",
+  
+  // 2. Biar gambar gak error pas export
+  images: {
+    unoptimized: true,
+  },
+
+  // (Settingan lama kamu)
   typescript: {
-    // !! WARN !!
-    // Abaikan error TypeScript biar bisa deploy
     ignoreBuildErrors: true,
   },
   eslint: {
-    // Abaikan error ESLint biar bisa deploy
     ignoreDuringBuilds: true,
   },
 };
